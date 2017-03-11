@@ -1,0 +1,22 @@
+City  State Passengers  Upgrade Costs Resource Demanded Amount Demanded Connects To
+Albany  NY  10  1,000/5,000/10,000  Lemon 50  Kingston, Montpelier, Harrisburg
+Montpelier  VT  5 500/1,000/5,000 Corn  25  Albany, Ottawa, Augusta
+Augusta ME  5 500/1,000/5,000 Pig 25  Sherbrooke, Montpelier, Halifax, Concord
+Concord NH  5 500/1,000/5,000 Wood  25  Augusta, Boston
+Boston  MA  30  50,000/500,000/1,000,000  Strawberry  350 Concord, Providence
+Providence  RI  10  1,000/5,000/10,000  Oil 50  Boston, Hartford
+Hartford  CT  10  1,000/5,000/10,000  Orange  50  Providence, New York
+New York  NY  50  500,000/1,000,000/2,000,000 BBQ Rib 1000  Hartford, Trenton
+Trenton NJ  10  1,000/5,000/10,000  Pig 50  New York, Philadelphia
+Philadelphia  PA  50  500,000/1,000,000/2,000,000 Chicken 1000  Trenton, Dover
+Dover DE  5 500/1,000/5,000 Corn  25  Philadelphia, Baltimore
+Baltimore MD  10  1,000/5,000/10,000  Lemon 150 Dover, Washington, D.C.
+Washington  DC  30  50,000/500,000/1,000,000  Orange  350 Baltimore, Richmond
+Richmond  VA  5 500/1,000/5,000 Oil 25  Washington, D.C., Raleigh
+Raleigh NC  5 500/1,000/5,000 Paper 150 Richmond, Charleston, Columbia
+Charleston  WV  10  1,000/5,000/10,000  Salmon  50  Raleigh, Nashville, Columbus
+Columbus  OH  30  50,000/500,000/1,000,000  Paper 350 Charleston, Frankfort, Detroit
+Detroit MI  30  50,000/500,000/1,000,000  Corn  350 Columbus, Indianapolis, Madison, London, Toledo
+Toledo  OH  5 500/1,000/5,000 Pizza 25  Detroit, Pittsburgh
+Pittsburgh  PA  15  5,000/50,000/100,000  Cow 150 Toledo, Harrisburg
+Harrisburg  PA  5 500/1,000/5,000 Honey 25  Pittsburgh, Albany
