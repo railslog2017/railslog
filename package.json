@@ -3,5 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "GimYoungPhil <youngphil.gim@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "python -m SimpleHTTPServer"
+  },
+  "dependencies": {
+    "pouchdb": "^6.1.2"
+  }
 }
