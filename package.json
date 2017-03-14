@@ -10,6 +10,7 @@
     "product": "export NODE_ENV=product && webpack --config ./config/product.js"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "bootstrap": "4.0.0-alpha.6",
     "pouchdb": "^6.1.2",
     "underscore": "^1.8.3",
