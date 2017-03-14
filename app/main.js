@@ -1,2 +1,11 @@
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
-  console.log('main');
+import App from 'components/App.vue'
+
+Vue.use(VueRouter)
+
+const app = new Vue({
+  el: '#app',
+  render: h => h(App)
+})
