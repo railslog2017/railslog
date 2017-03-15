@@ -1,16 +1,15 @@
 <template lang="html">
   <div class="card mb-3">
     <div class="card-header">
-      {{ region.continent }}
+      {{ station.region }}
     </div>
     <div class="card-block text-center">
-      <h4 class="card-title">{{ region.regionName }}</h4>
-      <p class="card-text">{{ info }}</p>
+      <h4 class="card-title">{{ name }}</h4>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
-        <p class="text-muted">Resources Sold</p>
-        <p class="card-text">{{ region.resourcesSold }}</p>
+        
+        <p class="card-text">{{ station.resourceDemanded }}</p>
       </li>
     </ul>
   </div>
@@ -18,10 +17,10 @@
 
 <script>
 export default {
-  props: ['region'],
+  props: ['station'],
   computed: {
-    info() {
-      return `Stations ${this.region.stations}, ${this.region.totalDistance} km`
+    name() {
+      return `${this.station.city}, ${this.station.state}`
     }
   }
 }

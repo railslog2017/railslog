@@ -1,0 +1,22 @@
+<template lang="html">
+  <div class="container">
+    <h1>List</h1>
+    <div class="row">
+      <div class="col-4" v-for="station in stations">
+        <station v-bind:station="station"></station>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import Station from './Station.vue'
+
+export default {
+  components: { Station },
+  props: ['stations']
+}
+</script>
+
+<style lang="css">
+</style>
