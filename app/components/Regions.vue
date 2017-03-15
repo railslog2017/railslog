@@ -1,17 +1,18 @@
 <template lang="html">
-  <div class="container">
-    <h1>Regions</h1>
+  <section class="">
+    <jumbo></jumbo>
     <region-list v-bind:regions="regions.content"></region-list>
-  </div>
+  </section>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import Jumbo from './regions/Jumbo.vue'
 import RegionList from './regions/List.vue'
 import * as types from 'store/mutation-types'
 
 export default {
-  components: { RegionList },
+  components: { Jumbo, RegionList },
 
   computed: mapState([
     'regions'
