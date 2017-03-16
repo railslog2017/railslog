@@ -8,9 +8,24 @@
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
-        <p class="card-text">{{ station.resourceDemanded }}</p>
+        <p class="card-text">
+          Passengers {{ station.passengers }}
+        </p>
+      </li>
+      <li class="list-group-item">
+        <p class="card-text">
+          {{ station.upgradeCosts }}
+        </p>
       </li>
     </ul>
+    <div class="card-block text-center">
+      <p class="card-text">
+        {{ station.resourceDemanded }}
+      </p>
+      <p class="f">
+        {{ station.amountDemanded }}
+      </p>
+    </div>
   </div>
 </template>
 

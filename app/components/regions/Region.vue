@@ -9,7 +9,6 @@
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
-        <p class="text-muted">Resources Sold</p>
         <p class="card-text">{{ region.resourcesSold }}</p>
       </li>
     </ul>

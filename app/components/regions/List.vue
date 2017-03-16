@@ -1,6 +1,5 @@
 <template lang="html">
   <div class="container">
-    <h1>List</h1>
     <div class="row">
       <div class="col-md-4" v-for="region in regions">
         <region v-bind:region="region"></region>

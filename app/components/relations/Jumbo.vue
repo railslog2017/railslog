@@ -1,10 +1,15 @@
 <template lang="html">
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-3">Relations</h1>
-      <p class="lead">
-        [steɪʃn] (기차)역
-      </p>
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="display-4">Relations</h1>
+        </div>
+        <div class="col-md-6">
+          <p>1 Select <button class="btn btn-outline-success btn-sm">Regions</button> button</p>
+          <p>2 Select <button class="btn btn-outline-warning btn-sm">Resource</button> button</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template lang="html">
-  <section class="">
+  <section class="stations">
     <jumbo></jumbo>
     <station-list v-bind:stations="stations.content"></station-list>
   </section>
@@ -9,7 +9,7 @@
 import { mapState } from 'vuex'
 import Jumbo from './stations/Jumbo.vue'
 import StationList from './stations/List.vue'
-import * as types from 'store/mutation-types'
+import * as types from 'store/types'
 
 export default {
   components: { Jumbo, StationList },

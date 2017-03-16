@@ -7,14 +7,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="region in regions">
-        <td>
+      <tr v-for="region in regions" :key="region.name">
+        <td v-bind:class="{ 'table-success': region.name == regionSelected }">
           <button type="button" class="btn btn-outline-success btn-sm"
             v-on:click="selectRegion">
             {{ region.name }}
           </button>
         </td>
-        <th>{{ region.resourcesSold }}</th>
+        <td v-bind:class="{ 'table-warning': region.resourcesSold.indexOf(resourceSelected) != -1 }">
+          {{ region.resourcesSold }}
+        </td>
       </tr>
     </tbody>
   </table>
@@ -22,12 +24,15 @@
 
 <script>
 export default {
-  props: ['regions'],
+  props: ['regions', 'regionSelected', 'resourceSelected'],
+
+  computed: {
+  },
 
   methods: {
     selectRegion(evt) {
-      let regionName = evt.target.innerText
-      this.$emit('selectRegion', regionName)
+      let region = evt.target.innerText
+      this.$emit('selectRegion', region)
     }
   }
 }

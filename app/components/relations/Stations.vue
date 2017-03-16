@@ -8,10 +8,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="station in stations">
+      <tr v-for="station in stations" :key="station.city">
         <td>{{ station.city }}, {{ station.state }}</td>
         <td>
-          <button type="button" class="btn btn-outline-warning btn-sm">
+          <button type="button" class="btn btn-outline-warning btn-sm"
+              v-on:click="selectResource">
             {{ station.resourceDemanded }}
           </button>
         </td>
@@ -23,7 +24,14 @@
 
 <script>
 export default {
-  props: ['stations']
+  props: ['stations'],
+
+  methods: {
+    selectResource(evt) {
+      let resource = evt.target.innerText
+      this.$emit('selectResource', resource)
+    }
+  }
 }
 </script>
 

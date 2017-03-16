@@ -1,21 +1,32 @@
 <template lang="html">
-  <section class="container">
+  <section class="relations">
     <jumbo></jumbo>
-    <div class="row">
-      <div class="col-md-7">
-        <h3>Regions</h3>
-        <regions v-bind:regions="regions.content"
-          v-on:selectRegion="selectRegion">
-        </regions>
-      </div>
-      <div class="col-md-5">
-        <div class="clearfix">
-          <h3 class="float-left">Stations</h3>
-          <h5 class="float-right text-success">
-            {{ stations.regionSelected }}
-          </h5>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="clearfix">
+            <h3 class="float-left">Regions</h3>
+            <h5 class="float-right text-warning">
+              {{ stations.resourceSelected }}
+            </h5>
+          </div>
+          <regions v-bind:regions="regions.content"
+              v-bind:regionSelected="stations.regionSelected"
+              v-bind:resourceSelected="stations.resourceSelected"
+              v-on:selectRegion="selectRegion">
+          </regions>
         </div>
-        <stations v-bind:stations="stationsSelected"></stations>
+        <div class="col-md-5">
+          <div class="clearfix">
+            <h3 class="float-left">Stations</h3>
+            <h5 class="float-right text-success">
+              {{ stations.regionSelected }}
+            </h5>
+          </div>
+          <stations v-bind:stations="stationsSelected"
+            v-on:selectResource="selectResource">
+          </stations>
+        </div>
       </div>
     </div>
   </section>
@@ -26,7 +37,7 @@ import { mapState, mapGetters } from 'vuex'
 import Jumbo from './relations/Jumbo.vue'
 import Regions from './relations/Regions.vue'
 import Stations from './relations/Stations.vue'
-import * as types from 'store/mutation-types'
+import * as types from 'store/types'
 
 export default {
   components: { Jumbo, Regions, Stations },
@@ -58,11 +69,16 @@ export default {
         })
       }
     },
-
-    selectRegion(regionName) {
+    selectRegion(region) {
       this.$store.commit({
         type: types.SELECT_REGION,
-        regionName
+        region
+      })
+    },
+    selectResource(resource) {
+      this.$store.commit({
+        type: types.SELECT_RESOURCE,
+        resource
       })
     }
   }

@@ -1,9 +1,10 @@
 import _ from 'underscore'
 import API from 'api'
-import * as types from 'store/mutation-types'
+import * as types from 'store/types'
 
 const state = {
   regionSelected: 'none',
+  resourceSelected: 'none',
   content: [
     /*
     {
@@ -44,8 +45,12 @@ const mutations = {
   [types.RECEIVE_STATIONS] (state, { stations }) {
     state.content = stations.content
   },
-  [types.SELECT_REGION] (state, { regionName }) {
-    state.regionSelected = regionName
+  [types.SELECT_REGION] (state, { region }) {
+    state.resourceSelected = 'none'
+    state.regionSelected = region
+  },
+  [types.SELECT_RESOURCE] (state, { resource }) {
+    state.resourceSelected = resource
   }
 }
 

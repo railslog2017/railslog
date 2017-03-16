@@ -1,6 +1,6 @@
 import _ from 'underscore'
 import API from 'api'
-import * as types from 'store/mutation-types'
+import * as types from 'store/types'
 
 const state = {
   content: [
