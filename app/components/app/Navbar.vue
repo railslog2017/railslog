@@ -10,6 +10,9 @@
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+          <router-link tag="li" to="/relations" class="nav-item" active-class="active">
+            <a class="nav-link">Relations</a>
+          </router-link>
           <router-link tag="li" to="/regions" class="nav-item" active-class="active">
             <a class="nav-link">Regions</a>
           </router-link>

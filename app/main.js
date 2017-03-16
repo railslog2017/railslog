@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import App from 'components/App.vue'
 import Home from 'components/Home.vue'
+import Relations from 'components/Relations.vue'
 import Regions from 'components/Regions.vue'
 import Stations from 'components/Stations.vue'
 import About from 'components/About.vue'
@@ -14,6 +15,7 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/', component: Home },
+  { path: '/relations', component: Relations },
   { path: '/regions', component: Regions },
   { path: '/stations', component: Stations },
   { path: '/about', component: About },

@@ -1,7 +1,9 @@
+import _ from 'underscore'
 import API from 'api'
 import * as types from 'store/mutation-types'
 
 const state = {
+  regionSelected: 'none',
   content: [
     /*
     {
@@ -22,6 +24,11 @@ const state = {
 }
 
 const getters = {
+  stationsSelected: (state) => {
+    return _.filter(state.content, (station) => {
+      return station.region == state.regionSelected
+    })
+  }
 }
 
 const actions = {
@@ -36,6 +43,9 @@ const actions = {
 const mutations = {
   [types.RECEIVE_STATIONS] (state, { stations }) {
     state.content = stations.content
+  },
+  [types.SELECT_REGION] (state, { regionName }) {
+    state.regionSelected = regionName
   }
 }
 

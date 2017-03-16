@@ -1,3 +1,4 @@
+import _ from 'underscore'
 import API from 'api'
 import * as types from 'store/mutation-types'
 
@@ -5,7 +6,7 @@ const state = {
   content: [
     /*
     {
-      "regionName": "USA East",
+      "name": "USA East",
       "stations": 21,
       "totalDistance": 11054,
       "resourcesSold": "Honey, Paper, Pizza, Salmon, Steel, Strawberry, Wood, Onion"

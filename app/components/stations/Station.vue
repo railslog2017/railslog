@@ -8,7 +8,6 @@
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
-        
         <p class="card-text">{{ station.resourceDemanded }}</p>
       </li>
     </ul>

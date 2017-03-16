@@ -4,7 +4,7 @@
       {{ region.continent }}
     </div>
     <div class="card-block text-center">
-      <h4 class="card-title">{{ region.regionName }}</h4>
+      <h4 class="card-title">{{ region.name }}</h4>
       <p class="card-text">{{ info }}</p>
     </div>
     <ul class="list-group list-group-flush">
