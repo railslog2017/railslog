@@ -5,9 +5,9 @@
   "author": "GimYoungPhil <youngphil.gim@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "develop": "webpack-dev-server --config ./config/develop.js",
-    "preproduct": "rimraf dist",
-    "product": "export NODE_ENV=product && webpack --config ./config/product.js"
+    "dev": "webpack-dev-server --config ./config/develop.js",
+    "prebuid": "rimraf dist",
+    "build": "export NODE_ENV=product && webpack --config ./config/product.js"
   },
   "dependencies": {
     "axios": "^0.15.3",

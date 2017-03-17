@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
 
@@ -24,7 +25,15 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            css: ExtractTextPlugin.extract({
+              use: 'css-loader',
+              fallback: 'vue-style-loader'
+            })
+          }
+        }
       },
       {
         test: /\.js$/,
@@ -47,11 +56,13 @@ module.exports = {
 
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'mainfest']
+      names: ['vendor', 'manifest']
     }),
 
     new HtmlWebpackPlugin({
       template: 'app/template/index.html'
-    })
+    }),
+
+    new ExtractTextPlugin('[name].[hash].css')
   ]
 }
