@@ -3,9 +3,9 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h1 class="display-4">Relations</h1>
+          <h1 class="display-4 wf-robotocondensed">Relations</h1>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 wf-roboto">
           <p>1 Select <button class="btn btn-outline-success btn-sm">Regions</button> button</p>
           <p>2 Select <button class="btn btn-outline-warning btn-sm">Resource</button> button</p>
         </div>

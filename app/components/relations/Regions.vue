@@ -39,4 +39,7 @@ export default {
 </script>
 
 <style lang="css">
+.table td {
+  transition: background-color .7s;
+}
 </style>

@@ -42,7 +42,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader',
+        }),
+        include: /node_modules/
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -63,6 +67,6 @@ module.exports = {
       template: 'app/template/index.html'
     }),
 
-    new ExtractTextPlugin('[name].[hash].css')
+    new ExtractTextPlugin('[name].[chunkhash].css')
   ]
 }

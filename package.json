@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --config ./config/develop.js",
-    "prebuid": "rimraf dist",
+    "prebuild": "rimraf dist",
     "build": "export NODE_ENV=product && webpack --config ./config/product.js"
   },
   "dependencies": {
