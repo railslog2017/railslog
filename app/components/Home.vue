@@ -1,11 +1,16 @@
 <template lang="html">
-  <div class="container">
-    <h1>Home</h1>
+  <div class="">
+    <youtube></youtube>
+    <feature></feature>
   </div>
 </template>
 
 <script>
+import Youtube from './home/Youtube.vue'
+import Feature from './home/Feature.vue'
+
 export default {
+  components: { Youtube, Feature }
 }
 </script>
 

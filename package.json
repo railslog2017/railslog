@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "webpack-dev-server --config ./config/develop.js",
     "prebuild": "rimraf dist",
-    "build": "export NODE_ENV=product && webpack --config ./config/product.js"
+    "build": "export NODE_ENV=product && webpack --config ./config/product.js",
+    "predeploy": "cp -r ./data/* ./dist/",
+    "deploy": "cd ./dist && surge ./"
   },
   "dependencies": {
     "axios": "^0.15.3",
