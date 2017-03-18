@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="jumbotron jumbotron-fluid jumbotron-youtube py-0">
+  <div class="jumbotron jumbotron-fluid jumbotron-youtube py-0 mb-0">
     <div class="container">
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2GIoC_3-DVA" frameborder="0" allowfullscreen></iframe>
