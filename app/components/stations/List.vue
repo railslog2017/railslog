@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="container">
     <div class="row">
-      <div class="col-4" v-for="station in stations">
+      <div class="col-md-4" v-for="station in stations">
         <station v-bind:station="station"></station>
       </div>
     </div>
