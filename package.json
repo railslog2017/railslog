@@ -5,9 +5,9 @@
   "author": "GimYoungPhil <youngphil.gim@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --config ./config/develop.js",
+    "dev": "webpack-dev-server --config ./config/develop.js --open --hot",
     "prebuild": "rimraf dist",
-    "build": "export NODE_ENV=product && webpack --config ./config/product.js",
+    "build": "export NODE_ENV=product && webpack --config ./config/product.js --progress --hide-modules",
     "predeploy": "cp -r ./data/* ./dist/",
     "deploy": "cd ./dist && surge ./"
   },
