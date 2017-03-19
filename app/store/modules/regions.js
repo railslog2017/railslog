@@ -15,8 +15,7 @@ const state = {
   ]
 }
 
-const getters = {
-}
+const getters = {}
 
 const actions = {
   [types.FETCH_REGIONS] (context) {

@@ -6,6 +6,7 @@ import Home from 'components/Home.vue'
 import Relations from 'components/Relations.vue'
 import Regions from 'components/Regions.vue'
 import Stations from 'components/Stations.vue'
+import Resources from 'components/Resources.vue'
 import About from 'components/About.vue'
 import NotFound from 'components/NotFound.vue'
 
@@ -18,6 +19,7 @@ const routes = [
   { path: '/relations', component: Relations },
   { path: '/regions', component: Regions },
   { path: '/stations', component: Stations },
+  { path: '/resources', component: Resources },
   { path: '/about', component: About },
   { path: '*', component: NotFound }
 ]

@@ -21,6 +21,9 @@
           <router-link tag="li" to="/stations" class="nav-item" active-class="active">
             <a class="nav-link">Stations</a>
           </router-link>
+          <router-link tag="li" to="/resources" class="nav-item" active-class="active">
+            <a class="nav-link">Resources</a>
+          </router-link>
         </ul>
       </div>
     </nav>
