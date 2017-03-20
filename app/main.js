@@ -9,7 +9,6 @@ import Stations from 'components/Stations.vue'
 import Resources from 'components/Resources.vue'
 import About from 'components/About.vue'
 import NotFound from 'components/NotFound.vue'
-
 import store from 'store'
 
 Vue.use(VueRouter)
