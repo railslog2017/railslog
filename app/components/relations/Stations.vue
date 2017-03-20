@@ -1,5 +1,5 @@
 <template lang="html">
-  <table class="table">
+  <table class="table table-sm">
     <thead>
       <tr>
         <th>City, State</th>
@@ -11,6 +11,7 @@
       <tr v-for="station in stations" :key="station.city">
         <td>{{ station.city }}, {{ station.state }}</td>
         <td>
+          <img class="sprite" v-bind:class="spriteImg(station.resourceDemanded)">
           <button type="button" class="btn btn-outline-warning btn-sm"
               v-on:click="selectResource">
             {{ station.resourceDemanded }}
@@ -30,6 +31,10 @@ export default {
     selectResource(evt) {
       let resource = evt.target.innerText
       this.$emit('selectResource', resource)
+    },
+    spriteImg(resourceName) {
+      let name = resourceName.replace(' ', '-')
+      return `sprite-${name}`
     }
   }
 }
