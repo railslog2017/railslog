@@ -15,6 +15,7 @@
     "axios": "^0.15.3",
     "bootstrap": "4.0.0-alpha.6",
     "pouchdb": "^6.1.2",
+    "pouchdb-browser": "^6.1.2",
     "underscore": "^1.8.3",
     "vue": "^2.2.4",
     "vue-router": "^2.3.0",
