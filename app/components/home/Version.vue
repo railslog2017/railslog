@@ -1,12 +1,22 @@
 <template lang="html">
   <section>
     <div class="container my-5">
-      <p>Fixed 17.03.25 <small>version 0.1.0</small></p>
-      <ul>
-        <li>Euro South - Stations</li>
-        <li>Stations - Cost</li>
-        <li>Resource Image - Utility Knife</li>
-      </ul>
+    <div class="row">
+        <p>Fixed 17.03.29 <small>version 0.1.1</small></p>
+        <ul>
+          <li>Rregions - Mexico, Caribbean, Central America</li>
+          <li>Stations - update</li>
+          <li>Resource - Banana, Coffee Beans, Peanut, Tomato</li>
+        </ul>
+      </div>
+      <div class="row">
+        <p>Fixed 17.03.25 <small>version 0.1.0</small></p>
+        <ul>
+          <li>Euro South - Stations</li>
+          <li>Stations - Cost</li>
+          <li>Resource Image - Utility Knife</li>
+        </ul>
+      </div>
       <hr>
     </div>
   </section>
