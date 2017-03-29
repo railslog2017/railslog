@@ -1,1 +1,8 @@
 /* main css */
+
+@media (min-width: 1920px) {
+  .container {
+    width: 1540px;
+    max-width: 100%;
+  }
+}

@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="card mb-4">
     <div class="card-block">
-      <img class="sprite pull-right" v-bind:class="spriteImg">
+      <img class="sprite pull-right" v-bind:class="resource.name.replace(' ', '')">
       <h4 class="card-title">{{ resource.name }}
       </h4>
     </div>
@@ -23,13 +23,7 @@
 
 <script>
 export default {
-  props: ['resource'],
-  computed: {
-    spriteImg() {
-      let name = this.resource.name.replace(' ', '-')
-      return `sprite-${name}`
-    }
-  }
+  props: ['resource']
 }
 </script>
 
