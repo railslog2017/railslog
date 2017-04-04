@@ -1,7 +1,13 @@
 <template lang="html">
   <section>
     <div class="container my-5">
-    <div class="row">
+      <div class="row">
+        <p>Fixed 17.04.04 <small>version 0.1.1</small></p>
+        <ul>
+          <li>Stations - update</li>
+        </ul>
+      </div>
+      <div class="row">
         <p>Fixed 17.03.29 <small>version 0.1.1</small></p>
         <ul>
           <li>Rregions - Mexico, Caribbean, Central America</li>
