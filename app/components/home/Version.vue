@@ -2,6 +2,12 @@
   <section>
     <div class="container my-5">
       <div class="row">
+        <p>Fixed 17.04.11 <small>version 0.1.2</small></p>
+        <ul>
+          <li>Resource - Peanut</li>
+        </ul>
+      </div>
+      <div class="row">
         <p>Fixed 17.04.04 <small>version 0.1.1</small></p>
         <ul>
           <li>Stations - update</li>

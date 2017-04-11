@@ -8,8 +8,7 @@ const state = {
   content: [
     /*
     {
-      "city": "Albany",
-      "state": "NY",
+      "city": "Albany, NY",
       "passengers": 10,
       "upgradeCosts": "1,000/5,000/10,000",
       "resourceDemanded": "Lemon",

@@ -26,9 +26,6 @@
 export default {
   props: ['regions', 'regionSelected', 'resourceSelected'],
 
-  computed: {
-  },
-
   methods: {
     selectRegion(evt) {
       let region = evt.target.innerText

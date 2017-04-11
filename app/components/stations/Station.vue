@@ -4,7 +4,7 @@
       {{ station.region }}
     </div>
     <div class="card-block text-center">
-      <h4 class="card-title">{{ name }}</h4>
+      <h4 class="card-title">{{ station.city }}</h4>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
@@ -31,12 +31,7 @@
 
 <script>
 export default {
-  props: ['station'],
-  computed: {
-    name() {
-      return `${this.station.city}, ${this.station.state}`
-    }
-  }
+  props: ['station']
 }
 </script>
 
