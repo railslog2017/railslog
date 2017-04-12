@@ -40,6 +40,7 @@ const actions = {
   [types.FETCH_RESOURCES] (context) {
     API.getResources()
       .then(resources => {
+        console.log(resources)
         context.commit(types.RECEIVE_RESOURCES, { resources })
       })
   }

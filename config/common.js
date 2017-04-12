@@ -15,6 +15,7 @@ module.exports = {
       vue$: 'vue/dist/vue.esm.js',
       api: path.resolve(__dirname, '../app/api'),
       components: path.resolve(__dirname, '../app/components'),
+      db: path.resolve(__dirname, '../app/db'),
       store: path.resolve(__dirname, '../app/store'),
       template: path.resolve(__dirname, '../app/template')
     },

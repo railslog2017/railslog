@@ -1,5 +1,6 @@
 import _ from 'underscore'
 import API from 'api'
+import DB from 'db'
 import * as types from 'store/types'
 
 const state = {
@@ -33,16 +34,28 @@ const getters = {
 
 const actions = {
   [types.FETCH_STATIONS] (context) {
-    API.getStations()
+    // API.getStations()
+    //   .then(stations => {
+    //     context.commit(types.RECEIVE_STATIONS, { stations })
+    //   })
+    DB.getStations()
       .then(stations => {
+        console.log(stations);
         context.commit(types.RECEIVE_STATIONS, { stations })
+      })
+  },
+  [types.UPDATE_STATION] (context, { station }) {
+    console.log(station);
+    DB.putStation(station)
+      .then(doc => {
+        console.log(doc)
       })
   }
 }
 
 const mutations = {
   [types.RECEIVE_STATIONS] (state, { stations }) {
-    state.content = stations.content
+    state.content = stations
   },
   [types.SELECT_REGION] (state, { region }) {
     state.resourceSelected = 'none'
