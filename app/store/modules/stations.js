@@ -1,6 +1,5 @@
 import _ from 'underscore'
 import API from 'api'
-import DB from 'db'
 import * as types from 'store/types'
 
 const state = {
@@ -10,15 +9,9 @@ const state = {
     /*
     {
       "city": "Albany, NY",
-      "passengers": 10,
-      "upgradeCosts": "1,000/5,000/10,000",
       "resourceDemanded": "Lemon",
       "amountDemanded": 50,
-      "connectsTo": "Kingston, Montpelier, Harrisburg",
-      "region": "USA East",
-      "currentAmountDemanded": 0,
-      "currentResourceDemanded": false,
-      "currentLevel": 0
+      "region": "USA East"
     },
     */
   ]
@@ -34,28 +27,16 @@ const getters = {
 
 const actions = {
   [types.FETCH_STATIONS] (context) {
-    // API.getStations()
-    //   .then(stations => {
-    //     context.commit(types.RECEIVE_STATIONS, { stations })
-    //   })
-    DB.getStations()
+    API.getStations()
       .then(stations => {
-        console.log(stations);
         context.commit(types.RECEIVE_STATIONS, { stations })
-      })
-  },
-  [types.UPDATE_STATION] (context, { station }) {
-    console.log(station);
-    DB.putStation(station)
-      .then(doc => {
-        console.log(doc)
       })
   }
 }
 
 const mutations = {
   [types.RECEIVE_STATIONS] (state, { stations }) {
-    state.content = stations
+    state.content = stations.content
   },
   [types.SELECT_REGION] (state, { region }) {
     state.resourceSelected = 'none'

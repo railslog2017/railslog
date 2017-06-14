@@ -42,19 +42,25 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader : 'url-loader',
+            options: {
+              limit: 90000,
+              mimetype: 'image/png'
+            } 
+          }
+          
+        ]
+      },
+      {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader',
         }),
         include: /node_modules/
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
       }
     ]
   },

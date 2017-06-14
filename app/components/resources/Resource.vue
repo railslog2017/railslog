@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="card mb-4">
     <div class="card-block">
-      <img class="sprite pull-right" v-bind:class="resource.name.replace(' ', '')">
+      <img class="resource pull-right" v-bind:class="resource.name.replace(/ /g, '')">
       <h4 class="card-title">{{ resource.name }}
       </h4>
     </div>
@@ -27,8 +27,5 @@ export default {
 }
 </script>
 
-<style lang="css">
-.sprite {
-  zoom: .4;
-}
+<style src="./resources.css">
 </style>

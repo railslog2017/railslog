@@ -2,6 +2,15 @@
   <section>
     <div class="container my-5">
       <div class="row">
+        <p>Fixed 17.06.14 <small>version 0.1.3</small></p>
+        <ul>
+          <li>Tiny Rails Update 1.3.4</li>
+          <li>Rregions - Russia West, Russia East, Asia Center</li>
+          <li>Stations - update</li>
+          <li>Resource - update</li>
+        </ul>
+      </div>
+      <div class="row">
         <p>Fixed 17.04.11 <small>version 0.1.2</small></p>
         <ul>
           <li>Resource - Peanut</li>

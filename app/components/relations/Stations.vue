@@ -11,7 +11,7 @@
       <tr v-for="station in stations" :key="station.city">
         <td>{{ station.city }}</td>
         <td>
-          <img class="sprite" v-bind:class="station.resourceDemanded.replace(' ', '')">
+          <img class="resource" v-bind:class="station.resourceDemanded.replace(/ /g, '')">
           <button type="button" class="btn btn-outline-warning btn-sm"
               v-on:click="selectResource">
             {{ station.resourceDemanded }}
